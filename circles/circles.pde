@@ -1,11 +1,26 @@
+/*
+Our first example :D
+It makes random circles
+*/
+
+int screenX = 1000;
+int screenY = 1000;
+
 void setup()
 {
-  size(800,600);
+  //Set the window size
+  size(1000,1000);
 }
 
 void draw()
 {
-  fill(color(200,175,220,40));
-  rect(0,300,800,600);
-  circle(random(800),random(600), 220);
+  color background = color(185,195,250,10);
+  fill(background);
+  
+  rect(0,0,screenX,screenY);
+  //fill(color(220,100,160));
+  circle(mouseX,mouseY,220);
+  //circle(mouseX/5,mouseY/5,18);
+  //circle(mouseY,mouseX,100);
+  circle(mouseX,mouseY,(mouseX+mouseY)/2);
 }
